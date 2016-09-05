@@ -1,0 +1,41 @@
+{
+  "name": "simple-test",
+  "version": "0.0.1",
+  "description": "Simple tool to easily create, schedule and conduct online objective style quizzes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/puranik3/simple-test.git"
+  },
+  "keywords": [
+    "online",
+    "objective",
+    "objective type",
+    "objective-type",
+    "assessment",
+    "quiz",
+    "test"
+  ],
+  "author": {
+    "name" : "Prashanth Puranik",
+    "email" : "puranik.prashanth@gmail.com"
+  },
+  "contributors": [
+    {
+      "name" : "Harish K",
+      "email" : "kharish1@gmail.com"
+    },
+    {
+      "name" : "Prashanth Puranik",
+      "email" : "puranik.prashanth@gmail.com"
+    }
+  ],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/puranik3/simple-test/issues"
+  },
+  "homepage": "https://github.com/puranik3/simple-test#readme"
+}

@@ -1,0 +1,1 @@
+var SimpleTest = SimpleTest || {};
