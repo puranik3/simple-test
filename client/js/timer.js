@@ -17,7 +17,7 @@ SimpleTest.Timer = (function( $ ) {
 	Timer.prototype = $.extend( Object.create( EventBus.prototype ), {
 		constructor : Timer,
 		start : function() {
-			if( this.state !== 'start' ) {
+			if( this.state !== 'running' ) {
 				var timer = this;
 				this.elapsedSeconds	= this.elapsedSeconds || 0;
 				this.lastStartTime	= new Date();
@@ -25,16 +25,16 @@ SimpleTest.Timer = (function( $ ) {
 					var oldElapsedSeconds = timer.elapsedSeconds;
 					timer.elapsedSeconds  = Math.floor( ( new Date() - timer.lastStartTime ) / 1000 );
 				}, timerUpdateInterval );
-				this.state = 'start';
+				this.state = 'running';
 			}
 			return this;
 		},
 		stop : function() {
-			if( this.state !== 'stop' ) {
+			if( this.state !== 'stopped' ) {
 				clearInterval( this.intervalId );
 				this.intervalId = null;
 				this.lastStartTime = null;
-				this.state = 'stop';
+				this.state = 'stopped';
 			}
 			return this;
 		},
@@ -45,6 +45,9 @@ SimpleTest.Timer = (function( $ ) {
 		},
 		getElapsedSeconds : function() {
 			return this.elapsedSeconds;
+		},
+		getState : function() {
+			return this.state;
 		}
 	});
 	
