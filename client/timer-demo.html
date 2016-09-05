@@ -12,14 +12,16 @@
         <script src="js/timer.js"></script>
 
         <script>
-            var $timerEl = $( '#elapsed-seconds' );
-            var timer = new SimpleTest.Timer();
-            timer.start();
+            (function() {
+                var $timerEl = $( '#elapsed-seconds' );
+                var timer = new SimpleTest.Timer();
+                timer.start();
 
-            setInterval( function() {
-                var elapsedSeconds = timer.getElapsedSeconds();
-                $timerEl.html( elapsedSeconds );                
-            }, 500 );
+                setInterval( function() {
+                    var elapsedSeconds = timer.getElapsedSeconds();
+                    $timerEl.html( elapsedSeconds );                
+                }, 500 );
+            }());
         </script>
     </body>
 </html>
